@@ -19,7 +19,7 @@ def won?(board)
   WIN_COMBINATIONS.find do |win_combo|
     win_index_1 = win_combo[0]
     win_index_2 = win_combo[1]
-    win_index_3 = win_combo[3]
+    win_index_3 = win_combo[2]
 
     if position_taken?(board, win_index_1)
       position_1 = board[win_index_1]
