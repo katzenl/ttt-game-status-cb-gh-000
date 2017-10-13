@@ -16,7 +16,7 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  WIN_COMBINATIONS.select do |win_combo|
+  WIN_COMBINATIONS.find do |win_combo|
     win_index_1 = win_combo[0]
     win_index_2 = win_combo[1]
     win_index_3 = win_combo[3]
@@ -25,8 +25,6 @@ def won?(board)
       position_1 = board[win_index_1]
       if position_1 == board[win_index_2] && position_1 == board[win_index_3]
         true
-      else
-        false
       end
     end
   end
