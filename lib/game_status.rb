@@ -22,10 +22,12 @@ def won?(board)
     win_index_3 = win_combo[3]
 
     position_1 = board[win_index_1]
-    if position_1 == board[win_index_2] && position_1 == board[win_index_3]
-      return win_combo
-    else
-      false
+    if position_1 == "X" || position_1 == "O"
+      if position_1 == board[win_index_2] && position_1 == board[win_index_3]
+        return win_combo
+      else
+        false
+      end
     end
   end
 end
