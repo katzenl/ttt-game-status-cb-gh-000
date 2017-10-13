@@ -31,7 +31,9 @@ def won?(board)
 end
 
 def full?(board)
-  board.all? do |square|
-    square == "X" || square == "O"
-  end
+  board.all? {|square| square == "X" || square == "O"}
+end
+
+def draw?(board)
+  !won?(board) && full?(board)
 end
