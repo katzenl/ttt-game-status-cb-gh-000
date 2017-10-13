@@ -41,3 +41,10 @@ end
 def over?(board)
   won?(board) || full?(board)
 end
+
+def winner(board)
+  win_combo = won?(board)
+  if win_combo
+    board[win_combo[0]]
+  end
+end
