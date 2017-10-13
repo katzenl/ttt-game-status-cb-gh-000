@@ -24,7 +24,7 @@ def won?(board)
     if position_taken?(board, win_index_1)
       position_1 = board[win_index_1]
       if position_1 == board[win_index_2] && position_1 == board[win_index_3]
-        return win_combo
+        true
       else
         false
       end
